@@ -41,7 +41,7 @@ public class Aula05_Exercicio1 {
         lista.add(new Funcionario("Andre", "Gerente de projeto", "Tester"));
 
         //reordena em ordem alfabetica
-        Collections.sort(lista, Funcionario.FuncionarioNomeComparator);
+        //Collections.sort(lista, Funcionario.FuncionarioNomeComparator);
         
         for (Funcionario f :  lista){
              System.out.println(f.toString());
