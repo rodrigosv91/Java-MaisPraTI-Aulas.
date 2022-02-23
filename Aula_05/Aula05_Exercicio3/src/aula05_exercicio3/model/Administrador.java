@@ -4,7 +4,7 @@ package aula05_exercicio3.model;
 
 public class Administrador extends Funcionario {
 
-    public final static double BONIFICACAO = 0.06;
+    private final static double BONIFICACAO = 0.06;
 
     public Administrador(String nome) {
         super(nome);

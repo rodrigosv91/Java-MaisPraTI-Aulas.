@@ -4,7 +4,7 @@ package aula05_exercicio3.model;
 
 public class Programador extends Funcionario{
     
-    public static final double BONIFICACAO = 0.05;
+    private static final double BONIFICACAO = 0.05;
 
     public Programador(String nome) {
         super(nome);

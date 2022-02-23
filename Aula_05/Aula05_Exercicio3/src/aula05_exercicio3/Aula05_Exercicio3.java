@@ -5,7 +5,10 @@ import java.lang.*;
 
 import aula05_exercicio3.model.Administrador;
 import aula05_exercicio3.model.Contador;
+import aula05_exercicio3.model.Funcionario;
 import aula05_exercicio3.model.Programador;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Aula05_Exercicio3 {
 
@@ -24,6 +27,13 @@ public class Aula05_Exercicio3 {
         System.out.println(programador.getNome() + ": " + programador.valorTotalAReceber());
         System.out.println(contador.getNome() + ": " + contador.valorTotalAReceber());
         System.out.println(admin.getNome() + ": " + admin.valorTotalAReceber());
+        
+        
+        List<Funcionario> funcionarios = new ArrayList<>(); 
+        
+        
+        funcionarios.add(programador);
+        funcionarios.add(programador);
         
     }
     
