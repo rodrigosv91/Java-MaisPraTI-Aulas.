@@ -29,8 +29,8 @@ public class Pedido {
     public void setStatus (String status){
         
         try{
-        this.status = Status.valueOf(status.toUpperCase()); 
-        // valueOf seta o valor de um enum retornando um dos valores ja existentes do nosso enum criado (Status)      
+            this.status = Status.valueOf(status.toUpperCase()); 
+            // valueOf seta o valor de um enum retornando um dos valores ja existentes do nosso enum criado (Status)      
         }
         catch(Exception e) {
             System.out.println("Status invalido");
