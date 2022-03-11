@@ -30,4 +30,13 @@ public class VendedorService {
         System.out.println("Vendedor cadastrado com sucesso!");
     }
 
+    public static void mostrarVendasVendedor(int opcaoVendendor) {
+        if(!VendedorRepository.listar().contains(VendedorRepository.buscarVendedorPorId(opcaoVendendor))){
+            throw new RuntimeException("Vendedor não encontrado");
+        }else{
+            Vendedor vendedor = VendedorRepository.buscarVendedorPorId(opcaoVendendor);         
+            System.out.println("Vendedor: " + vendedor.getNome()+ " \npossue " + vendedor.getTotalVendas()+ " vendas." );
+        }
+    }
+
 }

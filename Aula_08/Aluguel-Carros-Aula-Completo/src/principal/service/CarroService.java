@@ -39,10 +39,13 @@ public class CarroService {
     public static void buscarCarrosAlugados() {
         List<Carro> carrosAlugados = CarroRepository.listar().stream().filter(carro -> carro.getStatus()
                 .equals("ALUGADO")).collect(Collectors.toList());
-        
-        carrosAlugados.forEach(carro -> {
-            System.out.println(carro.getMarca() + " - " + carro.getModelo() + " - " +carro.getPlaca());
-        });
+        if(!carrosAlugados.isEmpty()){
+            carrosAlugados.forEach(carro -> {
+                System.out.println(carro.getMarca() + " - " + carro.getModelo() + " - " +carro.getPlaca());
+            });
+        }else{
+            System.out.println("Nao há carros alugados");
+        }
     }
     
 }

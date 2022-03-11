@@ -173,8 +173,23 @@ public class Menu {
                 CarroService.buscarCarrosAlugados();
                 break;
             case 4:
-                System.out.println("IMPLEMENTAR");
+                limparTela();
+                VendedorService.mostrarVendedores();
+                System.out.println("Digite a opcao do vendedor desejado");
+                int opcaoVendendor = validaScanner(sc);
+                try{
+                    VendedorService.mostrarVendasVendedor(opcaoVendendor); 
+                }catch(RuntimeException e){
+                    System.out.println(e.getMessage());
+                }
                 break;
+                
+                // 4 - Ver total de vendas de um vendedor"
+                //limpar tela
+                //mostrar vendedores
+                //pegar id vendedor
+                //mostrar total vendas do vendedero com aquele id (primeiro atributo hashmap)
+                
         }
     }
 }
