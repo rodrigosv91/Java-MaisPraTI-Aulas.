@@ -56,9 +56,9 @@ public class Aula09 {
         */
         
         //Stream
-        /*
-        int[] array = {9,8,1,3,1,5,8};
         
+        int[] array = {9,8,1,3,1,5,8};
+        /*
         for (int i = 0; i < array.length; i++){
             System.out.println(array[i]);
         }
@@ -67,7 +67,7 @@ public class Aula09 {
         //Arrays.sort(array);
         //Arrays.stream(array).forEach(i -> System.out.println(i));
         
-        List<Integer> list2 =  Arrays.stream(array).boxed().collect(Collectors.toList());
+        List<Integer> list2 =  Arrays.stream(array).boxed().collect(Collectors.toList()); // or .collect(toList()); 
         /*
         list2.add(2344);
         list2.forEach(System.out::println);
