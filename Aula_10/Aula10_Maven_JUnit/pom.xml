@@ -44,5 +44,5 @@
 			</dependency>
 		</dependencies>
     </dependencyManagement>
-    
+    <name>Aula10_Maven_JUnit</name>
 </project>
