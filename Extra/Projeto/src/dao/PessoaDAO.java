@@ -2,6 +2,8 @@
 package dao;
 
 import dao.interfaceDAO.Operacoes;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import model.Pessoa;
 import repository.PessoaRepository;
@@ -19,17 +21,17 @@ public class PessoaDAO implements Operacoes{
 
     @Override 
     public void remover(Pessoa pessoa) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        PessoaRepository.remover(pessoa.getId());
     }
 
     @Override
     public void atualizar(Pessoa pessoa) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        PessoaRepository.atualizar(pessoa); 
     }
 
     @Override
-    public List<Pessoa> buscarTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public ArrayList<Pessoa> buscarTodos() {
+        return PessoaRepository.getLista(); 
     }
     
 }

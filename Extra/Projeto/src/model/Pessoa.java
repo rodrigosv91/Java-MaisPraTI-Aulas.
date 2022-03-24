@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
  */
 public class Pessoa {
     
+    private int id;
     private String nome;
     private String telefone;
     private LocalDateTime dataNascimento;
@@ -18,14 +19,23 @@ public class Pessoa {
     public Pessoa() {
     }
     
-    public Pessoa(String nome, String telefone, LocalDateTime dataNascimento, LocalDateTime dataCadastro, LocalDateTime dataAlteracao) {
+    public Pessoa(int id, String nome, String telefone, LocalDateTime dataNascimento, LocalDateTime dataCadastro, LocalDateTime dataAlteracao) {
+        this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.dataNascimento = dataNascimento;
         this.dataCadastro = dataCadastro;
         this.dataAlteracao = dataAlteracao;
     }
-    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+        
     public String getNome() {
         return nome;
     }

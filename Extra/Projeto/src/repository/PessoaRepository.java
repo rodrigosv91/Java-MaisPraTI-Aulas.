@@ -2,7 +2,12 @@
 package repository;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 import model.Pessoa;
+import utils.Contador;
 
 /**
  *
@@ -10,22 +15,24 @@ import model.Pessoa;
  */
 public class PessoaRepository {
     
-    public static ArrayList<Pessoa> lista = new ArrayList<Pessoa>();
+    public static HashMap<Integer, Pessoa> lista = new HashMap<Integer, Pessoa>();
 
     public static void inserir(Pessoa pessoa) {
-        lista.add(pessoa);
+        lista.put(pessoa.getId(), pessoa);
     }
     
-    public static void atualizar(int posicao, Pessoa pessoa) {
-        lista.set(posicao, pessoa);
-    }
-      
     public static void remover(int posicao) {
         lista.remove(posicao);
     }
-
-    public static ArrayList<Pessoa> getLista() {
-        return lista;
+    
+    public static void atualizar(Pessoa pessoa) {
+        lista.replace(pessoa.getId(), pessoa);
     }
+    
+    public static ArrayList<Pessoa> getLista() {
+        ArrayList<Pessoa> novaLista = new ArrayList<Pessoa>(lista.values());
+        return novaLista;
+        //return lista.values().stream().collect(Collectors.toList());       
+    } 
     
 }

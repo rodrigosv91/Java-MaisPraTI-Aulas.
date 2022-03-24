@@ -14,8 +14,8 @@ public class Aluno extends Pessoa{
     public Aluno() {
     }
 
-    public Aluno(String nome, String telefone, LocalDateTime dataNascimento, LocalDateTime dataCadastro, LocalDateTime dataAlteracao, double notaFinal) {
-        super(nome, telefone, dataNascimento, dataCadastro, dataAlteracao);
+    public Aluno(int id, String nome, String telefone, LocalDateTime dataNascimento, LocalDateTime dataCadastro, LocalDateTime dataAlteracao, double notaFinal) {
+        super(id, nome, telefone, dataNascimento, dataCadastro, dataAlteracao);
         this.notaFinal = notaFinal;
     }
 
