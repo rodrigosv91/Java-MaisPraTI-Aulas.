@@ -21,8 +21,8 @@ public class PessoaRepository {
         lista.put(pessoa.getId(), pessoa);
     }
     
-    public static void remover(int posicao) {
-        lista.remove(posicao);
+    public static void remover(int chave) {
+        lista.remove(chave);
     }
     
     public static void atualizar(Pessoa pessoa) {
@@ -35,4 +35,7 @@ public class PessoaRepository {
         //return lista.values().stream().collect(Collectors.toList());       
     } 
     
+    public static Pessoa getPessoaPorId(int id) {      
+        return lista.get(id);
+    }
 }

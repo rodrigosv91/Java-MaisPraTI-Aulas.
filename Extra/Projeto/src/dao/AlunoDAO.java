@@ -37,4 +37,7 @@ public class AlunoDAO implements Operacoes{
         return PessoaRepository.getLista(); 
     }
     
+    public Aluno buscarPessoa(int idAluno){
+        return (Aluno) PessoaRepository.getPessoaPorId(idAluno);      
+    }
 }

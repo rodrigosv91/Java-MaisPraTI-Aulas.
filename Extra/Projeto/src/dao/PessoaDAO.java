@@ -23,6 +23,10 @@ public class PessoaDAO implements Operacoes{
     public void remover(Pessoa pessoa) {
         PessoaRepository.remover(pessoa.getId());
     }
+    
+    public void remover(int id) {
+        PessoaRepository.remover(id);
+    }
 
     @Override
     public void atualizar(Pessoa pessoa) {
@@ -32,6 +36,10 @@ public class PessoaDAO implements Operacoes{
     @Override
     public ArrayList<Pessoa> buscarTodos() {
         return PessoaRepository.getLista(); 
+    }
+    
+    public Pessoa buscarPessoa(int idPessoa){
+        return PessoaRepository.getPessoaPorId(idPessoa);
     }
     
 }
