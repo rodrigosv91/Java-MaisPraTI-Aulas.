@@ -1,13 +1,8 @@
 
 package principal;
 
-import controller.Cadastrar;
-import dao.PessoaDAO;
-import java.time.LocalDateTime;
-import model.Aluno;
-import model.Pessoa;
-import repository.PessoaRepository;
-import utils.Contador;
+import java.util.Scanner;
+import utils.Menu;
 
 /**
  *
@@ -51,7 +46,7 @@ public class Main {
         */
         //System.out.println(PessoaRepository.getLista().get(a.getId()).getNome());
         //System.out.println(PessoaRepository.getLista().get(p.getId()).getNome());
-        
+        /*
         Cadastrar cad = new Cadastrar();
         
         cad.cadastrarPessoa("nome1", "telefone1", LocalDateTime.MIN);
@@ -66,6 +61,27 @@ public class Main {
                 System.out.println("Nota: " + al.getNotaFinal());
             }
         }
+        */
+        
+        //ler opcao
+        //verificar se opcao valida ou opcao de sair
+        //se opcao valida realizar procedimento escolhido (ou se sair encerrar)
+        //repete 
+        
+        Scanner sc = new Scanner(System.in);
+        int opcao = 0;
+        
+        do{
+            Menu.menuPrincipal();
+            //if(sc.hasNextInt())
+            opcao = sc.nextInt();   //READER
+            
+            Menu.executaOpcao(opcao, sc); 
+            
+        }while(opcao != 0);
+         
+        sc.close();
+        
     }
     
 }

@@ -37,7 +37,22 @@ public class AlunoDAO implements Operacoes{
         return PessoaRepository.getLista(); 
     }
     
-    public Aluno buscarPessoa(int idAluno){
-        return (Aluno) PessoaRepository.getPessoaPorId(idAluno);      
+    public Aluno buscarAluno(int idAluno){
+        if(PessoaRepository.getPessoaPorId(idAluno) instanceof Aluno){
+            //Se Aluno, retorna com casting  
+            return (Aluno) PessoaRepository.getPessoaPorId(idAluno); 
+        }else{          
+            //Se não, busca Aluno com dados disponiveis de pessoa
+            Pessoa pessoa = PessoaRepository.getPessoaPorId(idAluno);
+            Aluno aluno = new Aluno();
+            aluno.setId(pessoa.getId());
+            aluno.setNome(pessoa.getNome());
+            aluno.setDataNascimento(pessoa.getDataNascimento());
+            aluno.setDataCadastro(pessoa.getDataCadastro());
+            aluno.setDataAlteracao(pessoa.getDataAlteracao());
+            //aluno.setNotaFinal();
+            return aluno;
+        }      
+        //return (Aluno) PessoaRepository.getPessoaPorId(idAluno);      
     }
 }

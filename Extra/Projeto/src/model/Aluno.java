@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
  */
 public class Aluno extends Pessoa{
     
-    private double notaFinal;
+    protected double notaFinal;
 
     public Aluno() {
     }

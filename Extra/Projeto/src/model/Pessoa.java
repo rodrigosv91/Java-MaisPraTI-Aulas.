@@ -9,12 +9,12 @@ import java.time.LocalDateTime;
  */
 public class Pessoa {
     
-    private int id;
-    private String nome;
-    private String telefone;
-    private LocalDateTime dataNascimento;
-    private LocalDateTime dataCadastro;
-    private LocalDateTime dataAlteracao;
+    protected int id;
+    protected String nome;
+    protected String telefone;
+    protected LocalDateTime dataNascimento;
+    protected LocalDateTime dataCadastro;
+    protected LocalDateTime dataAlteracao;
 
     public Pessoa() {
     }
