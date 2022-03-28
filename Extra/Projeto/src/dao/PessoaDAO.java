@@ -39,20 +39,30 @@ public class PessoaDAO implements Operacoes{
         return PessoaRepository.getLista(); 
     }
     
-    public Pessoa buscarPessoa(int idPessoa){     
+    public Pessoa buscarPessoa(int idPessoa){ 
+        return PessoaRepository.getPessoaPorId(idPessoa);
+    }
+    
+    public Pessoa buscarComoPessoa(int idPessoa){     
         if(PessoaRepository.getPessoaPorId(idPessoa) instanceof Aluno){
             //Se Aluno, substitui por Pessoa
-            Pessoa pessoa = (Pessoa) PessoaRepository.getPessoaPorId(idPessoa);
-            pessoa.setId(pessoa.getId());
-            pessoa.setNome(pessoa.getNome());
-            pessoa.setDataNascimento(pessoa.getDataNascimento());
-            pessoa.setDataCadastro(pessoa.getDataCadastro());
-            pessoa.setDataAlteracao(pessoa.getDataAlteracao());          
-            return pessoa;           
+            Pessoa oldPessoa = PessoaRepository.getPessoaPorId(idPessoa);
+            Pessoa novaPessoa = new Pessoa();
+            novaPessoa.setId(idPessoa);
+            novaPessoa.setNome(oldPessoa.getNome());
+            novaPessoa.setTelefone(oldPessoa.getTelefone());
+            novaPessoa.setDataNascimento(oldPessoa.getDataNascimento());
+            novaPessoa.setDataCadastro(oldPessoa.getDataCadastro());
+            novaPessoa.setDataAlteracao(oldPessoa.getDataAlteracao());   
+            
+            System.out.println("ENTREI DAO PES 1");
+            
+            return novaPessoa;           
         }else{ 
+            //Se não, retorna Pessoa
+            System.out.println("ENTREI DAO PES 2");
             return PessoaRepository.getPessoaPorId(idPessoa);
         }
-        //return PessoaRepository.getPessoaPorId(idPessoa);
     }
     
 }

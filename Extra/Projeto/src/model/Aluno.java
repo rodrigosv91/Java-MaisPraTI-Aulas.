@@ -1,6 +1,7 @@
 
 package model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
@@ -14,7 +15,7 @@ public class Aluno extends Pessoa{
     public Aluno() {
     }
 
-    public Aluno(int id, String nome, String telefone, LocalDateTime dataNascimento, LocalDateTime dataCadastro, LocalDateTime dataAlteracao, double notaFinal) {
+    public Aluno(int id, String nome, String telefone, LocalDate dataNascimento, LocalDateTime dataCadastro, LocalDateTime dataAlteracao, double notaFinal) {
         super(id, nome, telefone, dataNascimento, dataCadastro, dataAlteracao);
         this.notaFinal = notaFinal;
     }

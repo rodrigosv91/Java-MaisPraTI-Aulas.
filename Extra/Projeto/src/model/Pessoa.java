@@ -1,6 +1,7 @@
 
 package model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 /**
@@ -12,14 +13,14 @@ public class Pessoa {
     protected int id;
     protected String nome;
     protected String telefone;
-    protected LocalDateTime dataNascimento;
+    protected LocalDate dataNascimento;
     protected LocalDateTime dataCadastro;
     protected LocalDateTime dataAlteracao;
 
     public Pessoa() {
     }
     
-    public Pessoa(int id, String nome, String telefone, LocalDateTime dataNascimento, LocalDateTime dataCadastro, LocalDateTime dataAlteracao) {
+    public Pessoa(int id, String nome, String telefone, LocalDate dataNascimento, LocalDateTime dataCadastro, LocalDateTime dataAlteracao) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
@@ -52,11 +53,11 @@ public class Pessoa {
         this.telefone = telefone;
     }
 
-    public LocalDateTime getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(LocalDateTime dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

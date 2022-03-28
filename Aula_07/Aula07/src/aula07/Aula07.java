@@ -5,6 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.time.format.ResolverStyle;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
@@ -75,7 +76,15 @@ public class Aula07 {
         
         System.out.println(localDateTime3.format(format));
         
+        //DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+        //LocalDate novadata = LocalDate.parse("19/12/1990", dtf);
+        
+        //DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/uuuu").withResolverStyle(ResolverStyle.STRICT);
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate novadata = LocalDate.parse("19/12/1991", fmt);
 
+         System.out.println(novadata);
+        System.out.println(novadata.format(fmt));
         
     }
     
