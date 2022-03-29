@@ -16,20 +16,22 @@ public class Mostrar {
     public void mostrarTodos() {
         PessoaDAO dao = new PessoaDAO();
         ArrayList<Pessoa> lista = dao.buscarTodos();
-        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter fmtLD = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter fmtLDT = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         
         if(!lista.isEmpty()){       
             for(Pessoa p : lista){
-                System.out.println(String.format("|Identificação: %-5s  | Nome: %-5s | Data Nascimento: %-5s", p.getId(),  p.getNome(), p.getDataNascimento().format(fmt)));
+                System.out.println(String.format("| Identificação: %-5s  | Nome: %-5s | Telefone: %-5s | Data Nascimento: %-5s", p.getId(),  p.getNome(), p.getTelefone(), p.getDataNascimento().format(fmtLD)));
+                System.out.println(String.format("| Data de cadastro: %-5s | Data ultima alteração: %-5s", p.getDataCadastro().format(fmtLDT), p.getDataAlteracao().format(fmtLDT) ));
                 if(p instanceof Aluno){
                     Aluno a = (Aluno) p;
-                    System.out.println(String.format("|Nota Final   : %.2f", a.getNotaFinal()));
+                    System.out.println(String.format("| Nota Final   : %.2f", a.getNotaFinal()));
                 }
                 System.out.println("------------------------------------------------------");
             }
         }
         else{
-            System.out.println("Não há pessoas ou alunos na lista.");
+            System.out.println("\nNão há pessoas ou alunos para mostrar.");
         }
     }
 }

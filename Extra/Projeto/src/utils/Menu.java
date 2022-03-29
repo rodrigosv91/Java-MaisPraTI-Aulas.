@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import static utils.Reader.validaDataNascimento;
+import static utils.Reader.validaInteiroAtualizar;
+import static utils.Reader.validaInteiroRemover;
 
 /**
  *
@@ -25,33 +27,35 @@ public class Menu {
         System.out.println("4 - Deletar uma pessoa ou aluno");
         System.out.println("0 - Para sair");  
     }
+    
+    public static void limparTela() {
+        System.out.print("\n\n");
+        //System.out.print("\033[H\033[2J");  
+        //System.out.flush();  
+    }
 
     public static void executaOpcao(int opcao, Scanner sc) {
         
         switch(opcao){
             case 0:
-                System.out.println("Encerrando...");
+                System.out.println("\nEncerrando...");
                 //Thread.sleep(1000);
                 break;
             case 1:
-                //  view . cadastrar()
                 cadastrar();
                 break;
             case 2:
-                // view mostrar
                 mostrar();
                 break;
             case 3:
-                // atualizar
                 atualizar();
                 break;
             case 4:
-                // deletar
-                deletar();
+                remover();
                 break;      
             default: 
-                System.out.println("Opcão inválida, tente novamente.");
-                
+                System.out.println("\nOpcão inválida, tente novamente.");
+                limparTela();               
         }
     }
 
@@ -61,12 +65,13 @@ public class Menu {
         boolean recebeuNota = false;
         double notaFinal = 0;
         
+        limparTela();
         System.out.println("Informe o nome:"); // validar nome?
         String nome = sc.nextLine();
         System.out.println("Informe o telefone:"); // validar telefone
         String telefone = sc.nextLine();
         System.out.println("Informe a data de nascimento [Formato: dd/mm/aaaa]:"); 
-        String dataNascimento = validaDataNascimento(sc);  // validar data nascimento  
+        String dataNascimento = validaDataNascimento(sc);  
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/uuuu");
         LocalDate localDateNascimento = LocalDate.parse(dataNascimento, format);
             
@@ -82,12 +87,12 @@ public class Menu {
         }else{
             ctrlCadastrar.cadastrarPessoa(nome, telefone, localDateNascimento);
         }   
-        //sc.close();
     }
 
-    private static void mostrar() {
+    private static void mostrar() {      
         Mostrar m = new Mostrar();
         m.mostrarTodos();
+        limparTela();
     }
 
     private static void atualizar() {
@@ -99,7 +104,7 @@ public class Menu {
             double notaFinal = 0;
 
             System.out.println("Informe o número de identificação da pessoa ou aluno a ser atualizado:"); // validar int
-            int id = sc.nextInt();   
+            int id = validaInteiroAtualizar(sc);  
             sc.nextLine();
 
             if(ctrlAtualizar.verificaSeExiste(id)){
@@ -108,7 +113,7 @@ public class Menu {
                 System.out.println("Informe o telefone:"); // validar telefone
                 String telefone = sc.nextLine();
                 System.out.println("Informe a data de nascimento [Formato: dd/mm/aaaa]:"); 
-                String dataNascimento = validaDataNascimento(sc);  // validar data nascimento  
+                String dataNascimento = validaDataNascimento(sc);  
                 DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/uuuu");
                 LocalDate localDateNascimento = LocalDate.parse(dataNascimento, format);
                
@@ -121,32 +126,32 @@ public class Menu {
 
                 if(recebeuNota){
                     ctrlAtualizar.atualizarAluno(id, nome, telefone, localDateNascimento, notaFinal);
-                    System.out.println("ENTREI 1");
                 }else{
                     ctrlAtualizar.atualizarPessoa(id, nome, telefone, localDateNascimento);
-                    System.out.println("ENTREI 2");
                 } 
             }else{
-                System.out.println("Não há pessoa ou aluno com identificação: " + id);
+                System.out.println("\nNão há pessoa ou aluno com identificação: " + id);
+                limparTela();
             }
         }else{
-            System.out.println("Não há pessoas ou alunos para atualizar.");
+            System.out.println("\nNão há pessoas ou alunos para atualizar.");
+            limparTela();
         }
     }
 
-    private static void deletar() {
+    private static void remover() {
         Remover ctrlRemover = new Remover();
         
         if(!ctrlRemover.verificaSeVazia()){
             Scanner sc = new Scanner(System.in);
             System.out.println("Informe o número de identificação da pessoa ou aluno a ser removido:");       
-            int id = sc.nextInt();     // ToDo: VALIDAR
+            int id = validaInteiroRemover(sc);     
 
             ctrlRemover.removerPessoa(id);    
         }else{
-            System.out.println("Não há pessoas ou alunos para remover.");
+            System.out.println("\nNão há pessoas ou alunos para remover.");
         }
-        
+        limparTela();
     }
       
 }

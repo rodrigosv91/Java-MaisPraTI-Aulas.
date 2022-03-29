@@ -17,11 +17,11 @@ public class Remover {
         if(verificaSeExiste(pessoa.getId())){
             pDao.remover(pessoa); 
             if(!pDao.buscarTodos().contains(pDao.buscarPessoa(pessoa.getId()))){
-                System.out.println("Removido");
+                System.out.println("\nRemovido.");
             }
         }
         else{
-            System.out.println("Não há pessoa ou aluno com identificação: " + pessoa.getId());
+            System.out.println("\nNão há pessoa ou aluno com identificação: " + pessoa.getId());
         }
     }
     
@@ -30,11 +30,11 @@ public class Remover {
         if(verificaSeExiste(id)){
             pDao.remover(id); 
             if(!pDao.buscarTodos().contains(pDao.buscarPessoa(id))){
-                System.out.println("Removido");
+                System.out.println("\nRemovido.");
             }
         }
         else{
-            System.out.println("Não há pessoa ou aluno com identificação: " + id);
+            System.out.println("\nNão há pessoa ou aluno com identificação: " + id);
         }
     }
     
