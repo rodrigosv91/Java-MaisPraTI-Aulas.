@@ -37,7 +37,8 @@ public class AlunoDAO implements Operacoes{
         return PessoaRepository.getLista(); 
     }
     
-    public Aluno buscarAluno(int idAluno){
+    @Override
+    public Aluno buscar(int idAluno){
         return (Aluno) PessoaRepository.getPessoaPorId(idAluno);
     }
     

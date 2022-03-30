@@ -35,7 +35,7 @@ public interface Operacoes {
      * @param id o id da pessoa sendo buscada
      * @return Pessoa a pessoa com o id correspondente
      */
-    //Pessoa buscarPessoa(int id);
+    Pessoa buscar(int id);
     
     /**
      * 

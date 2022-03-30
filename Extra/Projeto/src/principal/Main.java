@@ -26,8 +26,7 @@ public class Main {
         pdao.adicionar(p);
                  
         pdao.adicionar(a);
-        Aluno alunoTest = (Aluno) PessoaRepository.getLista().get(a.getId());
-        
+        Aluno alunoTest = (Aluno) PessoaRepository.getLista().get(a.getId());        
         /*
         for(Pessoa pe : pdao.buscarTodos()){
             System.out.println(pe.getNome());
@@ -48,9 +47,9 @@ public class Main {
         int opcao = 0;        
         do{          
             Menu.menuPrincipal();
-            System.out.print("\nDigite a opção: ");
+            System.out.print("\nDigite a opção: "); 
             opcao = validaInteiroMenu(sc);                 
-            Menu.executaOpcao(opcao, sc);             
+            Menu.executaOpcao(opcao, sc);              
         }while(opcao != 0);         
         sc.close();       
     }

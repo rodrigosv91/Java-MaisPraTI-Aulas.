@@ -6,7 +6,6 @@ import controller.Cadastrar;
 import controller.Mostrar;
 import controller.Remover;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 import static utils.Reader.validaDataNascimento;
@@ -30,8 +29,6 @@ public class Menu {
     
     public static void limparTela() {
         System.out.print("\n\n");
-        //System.out.print("\033[H\033[2J");  
-        //System.out.flush();  
     }
 
     public static void executaOpcao(int opcao, Scanner sc) {
@@ -95,8 +92,7 @@ public class Menu {
         limparTela();
     }
 
-    private static void atualizar() {
-        
+    private static void atualizar() {       
         Atualizar ctrlAtualizar = new Atualizar(); 
         if(!ctrlAtualizar.verificaSeVazia()){
             Scanner sc = new Scanner(System.in);

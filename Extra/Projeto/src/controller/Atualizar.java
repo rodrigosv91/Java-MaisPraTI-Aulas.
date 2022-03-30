@@ -42,7 +42,7 @@ public class Atualizar {
     
     public boolean verificaSeExiste(int id) {
         PessoaDAO pDao = new PessoaDAO();        
-        return pDao.buscarTodos().contains(pDao.buscarPessoa(id));      
+        return pDao.buscarTodos().contains(pDao.buscar(id));      
     }
         
     public boolean verificaSeVazia(){

@@ -16,7 +16,7 @@ public class Remover {
         //PessoaDAO pDao =  new PessoaDAO();
         if(verificaSeExiste(pessoa.getId())){
             pDao.remover(pessoa); 
-            if(!pDao.buscarTodos().contains(pDao.buscarPessoa(pessoa.getId()))){
+            if(!pDao.buscarTodos().contains(pDao.buscar(pessoa.getId()))){
                 System.out.println("\nRemovido.");
             }
         }
@@ -29,7 +29,7 @@ public class Remover {
         //PessoaDAO pDao =  new PessoaDAO();       
         if(verificaSeExiste(id)){
             pDao.remover(id); 
-            if(!pDao.buscarTodos().contains(pDao.buscarPessoa(id))){
+            if(!pDao.buscarTodos().contains(pDao.buscar(id))){
                 System.out.println("\nRemovido.");
             }
         }
@@ -40,7 +40,7 @@ public class Remover {
     
     public boolean verificaSeExiste(int id) {    
         //PessoaDAO pDao =  new PessoaDAO();
-        return pDao.buscarTodos().contains(pDao.buscarPessoa(id));      
+        return pDao.buscarTodos().contains(pDao.buscar(id));      
     }
     
     public boolean verificaSeVazia(){

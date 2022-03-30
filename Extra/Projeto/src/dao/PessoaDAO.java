@@ -39,7 +39,8 @@ public class PessoaDAO implements Operacoes{
         return PessoaRepository.getLista(); 
     }
     
-    public Pessoa buscarPessoa(int idPessoa){ 
+    @Override
+    public Pessoa buscar(int idPessoa){ 
         return PessoaRepository.getPessoaPorId(idPessoa);
     }
     
