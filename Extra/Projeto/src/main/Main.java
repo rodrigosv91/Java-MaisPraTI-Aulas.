@@ -1,5 +1,5 @@
 
-package principal;
+package main;
 
 import java.util.Scanner;
 import utils.Menu;

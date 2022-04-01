@@ -27,7 +27,7 @@ public class Reader {
             testaParse = true;
             try {
                 // test to check if data has a valid format
-                while(!Pattern.matches("^(0[1-9]|[12][0-9]|3[01])[/.](0[1-9]|1[012])[/.]\\d\\d\\d\\d$", data)){
+                while(!Pattern.matches("^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/]\\d\\d\\d\\d$", data)){
                     System.out.println("\nData inválida.");
                     System.out.println("Informe a data de nascimento [Formato: dd/mm/aaaa]:"); 
                     data = sc.nextLine();
@@ -53,6 +53,55 @@ public class Reader {
         }
         return data;                   
     }
+    
+    public static String  validaNome(Scanner sc){
+        String entrada = sc.nextLine(); 
+        //nome com somente letras e ao menos 
+        while(!Pattern.matches("^\\D{1,}$", entrada)){
+            System.out.println("\nNome inválido [Somente letras e ao menos uma].");
+            System.out.println("Informe o nome novamente:"); 
+            entrada = sc.nextLine();
+       }
+       return entrada;
+    }
+    
+    public static String  validaTelefone(Scanner sc){
+        String entrada = sc.nextLine(); 
+        //telefone com pelo menos um digito            
+        while(!Pattern.matches(".*\\d+.*", entrada)){
+        //Alternative Patter 
+        //while(!Pattern.compile("\\d").matcher(entrada).find()){    
+            System.out.println("\nTelefone inválido [Precisa ao menos um número].");
+            System.out.println("Informe o telefone novamente:"); 
+            entrada = sc.nextLine();
+       }
+       return entrada;
+    }
+    
+    public static String  validaTelefone2(Scanner sc){
+        boolean check = true;
+        String entrada = sc.nextLine(); 
+        while(check){	
+            int count=0;
+            int i;
+            for(i = 0; i<entrada.length(); i++){
+		if(entrada.charAt(i) >= '0' && entrada.charAt(i) <= '9'){
+		    count++;
+                    break;
+		}
+            }
+            if(count>=1){
+                check = false;
+            }
+            else{
+                System.out.println("\nTelefone inválido [Precisa ao menos um número].");
+                System.out.println("Informe o telefone novamente:"); 
+                entrada = sc.nextLine();
+            }
+        }   
+       return entrada;
+    }
+    
             
     public static int validaInteiroMenu(Scanner sc){        
         while(!sc.hasNextInt()){

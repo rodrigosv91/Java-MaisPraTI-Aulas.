@@ -7,7 +7,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import model.Aluno;
 import model.Pessoa;
-import repository.PessoaRepository;
 
 /**
  *
@@ -28,16 +27,14 @@ public class Atualizar {
     
     public void atualizarAluno(int id, String nome, String telefone, LocalDate dataNascimento, double notaFinal) {
         
-        AlunoDAO aDao = new AlunoDAO();
-        PessoaDAO pDao = new PessoaDAO();        
+        AlunoDAO aDao = new AlunoDAO();     
         Aluno aluno = aDao.buscarComoAluno(id);
         aluno.setNome(nome);
         aluno.setTelefone(telefone);
         aluno.setDataNascimento(dataNascimento); 
         aluno.setDataAlteracao(LocalDateTime.now()); 
         aluno.setNotaFinal(notaFinal);             
-        aDao.atualizar(aluno); 
-        
+        aDao.atualizar(aluno);        
     }
     
     public boolean verificaSeExiste(int id) {

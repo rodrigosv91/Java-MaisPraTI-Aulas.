@@ -1,16 +1,11 @@
 
 package utils;
 
-import controller.Atualizar;
-import controller.Cadastrar;
-import controller.Mostrar;
-import controller.Remover;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
-import static utils.Reader.validaDataNascimento;
-import static utils.Reader.validaInteiroAtualizar;
-import static utils.Reader.validaInteiroRemover;
+import static presenter.Atualizar.atualizar;
+import static presenter.Cadastrar.cadastrar;
+import static presenter.Mostrar.mostrar;
+import static presenter.Remover.remover;
 
 /**
  *
@@ -28,7 +23,7 @@ public class Menu {
     }
     
     public static void limparTela() {
-        System.out.print("\n\n");
+        System.out.print("\n");
     }
 
     public static void executaOpcao(int opcao, Scanner sc) {
@@ -39,10 +34,10 @@ public class Menu {
                 //Thread.sleep(1000);
                 break;
             case 1:
-                cadastrar();
+                cadastrar(); 
                 break;
             case 2:
-                mostrar();
+                mostrar();  
                 break;
             case 3:
                 atualizar();
@@ -55,7 +50,7 @@ public class Menu {
                 limparTela();               
         }
     }
-
+    /*
     public static void cadastrar() {
         Scanner sc = new Scanner(System.in);
         Cadastrar ctrlCadastrar = new Cadastrar();      
@@ -85,14 +80,14 @@ public class Menu {
             ctrlCadastrar.cadastrarPessoa(nome, telefone, localDateNascimento);
         }   
     }
-
-    private static void mostrar() {      
+    
+    public static void mostrar() {      
         Mostrar m = new Mostrar();
         m.mostrarTodos();
         limparTela();
     }
-
-    private static void atualizar() {       
+    
+    public static void atualizar() {       
         Atualizar ctrlAtualizar = new Atualizar(); 
         if(!ctrlAtualizar.verificaSeVazia()){
             Scanner sc = new Scanner(System.in);
@@ -134,8 +129,8 @@ public class Menu {
             limparTela();
         }
     }
-
-    private static void remover() {
+    
+    public static void remover() {
         Remover ctrlRemover = new Remover();
         
         if(!ctrlRemover.verificaSeVazia()){
@@ -149,5 +144,5 @@ public class Menu {
         }
         limparTela();
     }
-      
+    */  
 }
