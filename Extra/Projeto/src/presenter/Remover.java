@@ -18,7 +18,6 @@ public class Remover {
             Scanner sc = new Scanner(System.in);
             System.out.println("Informe o número de identificação da pessoa ou aluno a ser removido:");       
             int id = validaInteiroRemover(sc);     
-
             ctrlRemover.removerPessoa(id);    
         }else{
             System.out.println("\nNão há pessoas ou alunos para remover.");

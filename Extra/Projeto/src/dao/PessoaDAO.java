@@ -3,8 +3,6 @@ package dao;
 
 import dao.interfaceDAO.Operacoes;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import model.Aluno;
 import model.Pessoa;
 import repository.PessoaRepository;
@@ -54,14 +52,10 @@ public class PessoaDAO implements Operacoes{
             novaPessoa.setTelefone(oldPessoa.getTelefone());
             novaPessoa.setDataNascimento(oldPessoa.getDataNascimento());
             novaPessoa.setDataCadastro(oldPessoa.getDataCadastro());
-            novaPessoa.setDataAlteracao(oldPessoa.getDataAlteracao());   
-            
-            System.out.println("ENTREI DAO PES 1");
-            
+            novaPessoa.setDataAlteracao(oldPessoa.getDataAlteracao());                          
             return novaPessoa;           
         }else{ 
             //Se não, retorna Pessoa
-            System.out.println("ENTREI DAO PES 2");
             return PessoaRepository.getPessoaPorId(idPessoa);
         }
     }

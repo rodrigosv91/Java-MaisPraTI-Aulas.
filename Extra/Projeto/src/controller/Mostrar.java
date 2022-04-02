@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import model.Aluno;
 import model.Pessoa;
+import static utils.Menu.limparTela;
 
 /**
  *
@@ -19,8 +20,12 @@ public class Mostrar {
         DateTimeFormatter fmtLD = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter fmtLDT = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         
-        if(!lista.isEmpty()){       
+        if(!lista.isEmpty()){     
+            String plural = lista.size()==1?"":"S";
+            System.out.println("\nLISTA PESSOA"+ plural +"/ALUNO"+ plural ); 
+            
             for(Pessoa p : lista){
+                limparTela();
                 System.out.println(String.format("| Identificação: %-5s  | Nome: %-5s | Telefone: %-5s | Data Nascimento: %-5s", p.getId(),  p.getNome(), p.getTelefone(), p.getDataNascimento().format(fmtLD)));
                 System.out.println(String.format("| Data de cadastro: %-5s | Data ultima alteração: %-5s", p.getDataCadastro().format(fmtLDT), p.getDataAlteracao().format(fmtLDT) ));
                 if(p instanceof Aluno){

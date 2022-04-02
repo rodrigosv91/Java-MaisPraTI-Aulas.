@@ -8,7 +8,7 @@ import static utils.Menu.limparTela;
 import static utils.Reader.validaDataNascimento;
 import static utils.Reader.validaNome;
 import static utils.Reader.validaTelefone;
-import static utils.Reader.validaTelefone2;
+import static utils.Reader.validaTelefone_2;
 
 /**
  *
@@ -26,7 +26,7 @@ public class Cadastrar {
         System.out.println("Informe o nome:"); 
         String nome = validaNome(sc);
         System.out.println("Informe o telefone:"); 
-        String telefone = validaTelefone2(sc); 
+        String telefone = validaTelefone_2(sc); 
         System.out.println("Informe a data de nascimento [Formato: dd/mm/aaaa]:"); 
         String dataNascimento = validaDataNascimento(sc);  
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/uuuu");

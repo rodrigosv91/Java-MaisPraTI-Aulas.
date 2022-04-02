@@ -15,16 +15,16 @@ import static utils.Menu.menuPrincipal;
  */
 public class Reader {
     
-    public static String validaDataNascimento(Scanner sc){    
-        boolean testaParse = true;
+    public static String validaDataNascimento(Scanner sc){          
         boolean testaPattern =  true;
+        boolean testaIsAfter = true;
         DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/uuuu");
         
         String data = sc.nextLine();
  
-        while(testaPattern || testaParse ){
+        while(testaPattern || testaIsAfter ){
             testaPattern = true;
-            testaParse = true;
+            testaIsAfter = true;
             try {
                 // test to check if data has a valid format
                 while(!Pattern.matches("^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/]\\d\\d\\d\\d$", data)){
@@ -35,10 +35,10 @@ public class Reader {
                 testaPattern = false;    
                 // Parse test to avoid year 31/02/2000 as valid
                 LocalDate parsedData = LocalDate.parse(data, format.withResolverStyle(ResolverStyle.STRICT)); 
-                testaParse = parsedData.isAfter(LocalDate.now());
+                testaIsAfter = parsedData.isAfter(LocalDate.now());
                 
-                if(testaParse){
-                    //testaParse = true;
+                if(testaIsAfter){
+                    //testaIsAfter = true;
                     System.out.println("\nData futura inválida.");
                     System.out.println("Informe a data de nascimento [Formato: dd/mm/aaaa]:"); 
                     data = sc.nextLine();
@@ -48,7 +48,7 @@ public class Reader {
                 System.out.println("\nData inválida.");
                 System.out.println("Informe a data de nascimento [Formato: dd/mm/aaaa]:"); 
                 data = sc.nextLine();
-                testaParse = true;
+                testaIsAfter = true;
             }
         }
         return data;                   
@@ -56,7 +56,7 @@ public class Reader {
     
     public static String  validaNome(Scanner sc){
         String entrada = sc.nextLine(); 
-        //nome com somente letras e ao menos 
+        // Nome com somente letras e ao menos uma
         while(!Pattern.matches("^\\D{1,}$", entrada)){
             System.out.println("\nNome inválido [Somente letras e ao menos uma].");
             System.out.println("Informe o nome novamente:"); 
@@ -65,11 +65,12 @@ public class Reader {
        return entrada;
     }
     
+    //Valida telefone com Regex
     public static String  validaTelefone(Scanner sc){
         String entrada = sc.nextLine(); 
-        //telefone com pelo menos um digito            
+        //Telefone com pelo menos um digito            
         while(!Pattern.matches(".*\\d+.*", entrada)){
-        //Alternative Patter 
+        //Alternative while Patter 
         //while(!Pattern.compile("\\d").matcher(entrada).find()){    
             System.out.println("\nTelefone inválido [Precisa ao menos um número].");
             System.out.println("Informe o telefone novamente:"); 
@@ -78,7 +79,8 @@ public class Reader {
        return entrada;
     }
     
-    public static String  validaTelefone2(Scanner sc){
+    //Valida telefone com metodo String: charAt
+    public static String  validaTelefone_2(Scanner sc){
         boolean check = true;
         String entrada = sc.nextLine(); 
         while(check){	
@@ -101,8 +103,7 @@ public class Reader {
         }   
        return entrada;
     }
-    
-            
+              
     public static int validaInteiroMenu(Scanner sc){        
         while(!sc.hasNextInt()){
             System.out.println("\nEntrada inválida, tente novamente.");
@@ -129,6 +130,5 @@ public class Reader {
             sc.nextLine();
         }
         return sc.nextInt();
-    }
-    
+    }    
 }

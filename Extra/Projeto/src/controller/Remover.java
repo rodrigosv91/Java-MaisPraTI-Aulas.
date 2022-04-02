@@ -39,7 +39,6 @@ public class Remover {
     }
     
     public boolean verificaSeExiste(int id) {    
-        //PessoaDAO pDao =  new PessoaDAO();
         return pDao.buscarTodos().contains(pDao.buscar(id));      
     }
     

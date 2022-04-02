@@ -3,15 +3,13 @@ package dao;
 
 import dao.interfaceDAO.Operacoes;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import model.Aluno;
 import model.Pessoa;
 import repository.PessoaRepository;
 
 /**
  *
- * @author Rodrigo
+ * @author Rodrigo Vieira
  */
 public class AlunoDAO implements Operacoes{
 
