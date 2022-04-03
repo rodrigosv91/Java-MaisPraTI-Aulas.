@@ -83,9 +83,37 @@ public class Aula07 {
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate novadata = LocalDate.parse("19/12/1991", fmt);
 
-         System.out.println(novadata);
+        System.out.println(novadata);
         System.out.println(novadata.format(fmt));
         
+        
+        //Calendar
+        int day = 05 ;
+        int month = 8;
+        int year = 2015;
+        // mes precisa ser -1 por que começa em 0 (zero)
+        System.out.println( findDay((month)-1, 05, 2015) );
+        
+    }
+    
+    
+    public static String findDay(int month, int day, int year) {
+            
+        Calendar c = Calendar.getInstance();
+            
+        c.set(year, month, day);
+        //c.set(Calendar.DAY_OF_MONTH, day);
+        //c.set(Calendar.MONTH, month);
+        //c.set(Calendar.YEAR, year);
+                   
+        //Integer i = c.get(Calendar.DAY_OF_WEEK);
+        int x = c.get(Calendar.DAY_OF_WEEK);
+                              
+        //zero is nothing
+        String[] days = {"", "SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"};
+                  
+        //return  i.toString();            
+        return  days[x];       
     }
     
 }
