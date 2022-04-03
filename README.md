@@ -74,11 +74,11 @@
 ### Extra 
 
 1. [Java design pattern: Singleton](Extra\java-design-pattern-singleton)
-	1. [Exemplo Singleton: Janela](Extra\singleton-example-janela)
-2. [Java EE / Web + Servlet](Extra\FirstServlet)
-3. [JDBC (mysql-connector) + Servlet + JSP](Extra\CRUD_Servlet)
-4. [Hello World: Spring Boot + Thymeleaf](Extra\hellospringboot)
-5. [Desenvolvimento projeto](Extra\Projeto)
+2. [Exemplo Singleton: Janela](Extra\singleton-example-janela)
+3. [Java EE / Web + Servlet](Extra\FirstServlet)
+4. [JDBC (mysql-connector) + Servlet + JSP](Extra\CRUD_Servlet)
+5. [Hello World: Spring Boot + Thymeleaf](Extra\hellospringboot)
+6. [Desenvolvimento projeto](Extra\Projeto)
 
 
 
