@@ -34,7 +34,7 @@
 
 ### Aula 04
 
-1. [Controle de versões: Git / GitHub](Aula_04 - git)
+1. [Controle de versões: Git / GitHub](Aula_04_-_Git)
 
 ### Aula 05
 
