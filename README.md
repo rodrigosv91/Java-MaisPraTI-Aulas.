@@ -51,7 +51,36 @@
 ### Aula 07
 
 1. [Datas: SimpleDateFormat, LocalDate, LocalDateTime, Period](Aula_07\Aula07)
-2. [Revisão: Projeto Locadora](Aula_07\Aula07_Revisao_Locadora)
+2. [Revisão: Projeto Locadora](Aula_07\Aula07_Revisao_Locadora) 
+
+
+
+### Aula 08
+
+
+1. [Locadora Completa](Aula_08\Aluguel-Carros-Aula-Completo)
+2. [Criando um Programa em Java: Batalha Naval](Aula_08\Aula08_BatalhaNaval_Completo)
+
+### Aula 09
+
+1. [Generics, Java Lambda Expressions, Stream, Collections](Aula_09\Aula09)
+
+
+### Aula 10
+
+1. [Estrutura de projeto: Maven Archetype + JUnit: Testes unitários](Aula_10\Aula10_Maven_JUnit)
+
+
+### Extra 
+
+1. [Java design pattern: Singleton](Extra\java-design-pattern-singleton)
+	1. [Exemplo Singleton: Janela](Extra\singleton-example-janela)
+2. [Java EE / Web + Servlet](Extra\FirstServlet)
+3. [JDBC (mysql-connector) + Servlet + JSP](Extra\CRUD_Servlet)
+4. [Hello World: Spring Boot + Thymeleaf](Extra\hellospringboot)
+5. [Desenvolvimento projeto](Extra\Projeto)
+
+
 
 
 
