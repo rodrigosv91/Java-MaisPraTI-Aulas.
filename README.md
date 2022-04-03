@@ -30,3 +30,47 @@
 1. [Static vs. Non-Static, encapsulamento, modificadores de acesso, Relações Classes/Objetos](Aula_03/Aula03)
 2. [Exercício 1: Testa ao adicionar nota a Aluno](Aula_03/Aula03_Exercicio1)
 3. [Exercício 2: Altera status e adiciona item em Pedido](Aula_03/Aula03_Exercicio2)
+4. [Exercício 3: Calculadora static](Aula_03/Aula03_Exercicio3)
+
+### Aula 04
+
+1. [Controle de versões: Git / GitHub](Aula_04 - git)
+
+### Aula 05
+
+1. [Listas, Herança, Polimorfismo, Interfaces, Classes abstratas](Aula_05\Aula05)
+2. [Exercício 1: Lista Funcionários](Aula_05\Aula05_Exercicio1)
+3. [Exercício 2: Sobrescrever classe Animal](Aula_05\Aula05_Exercicio2)
+4. [Exercício 3: Herdar classe abstrata funcionário e adicionar bonificação](Aula_05\Aula05_Exercicio3)
+
+### Aula 06
+
+1. [Tratamento de exceções (try, catch, finally, throw )](Aula_06\Aula06)
+2. [Exercício 1: Tratar FileNotFoundException e IOException](Aula_06\Aula06_Exercicio1)
+
+### Aula 07
+
+1. [Datas: SimpleDateFormat, LocalDate, LocalDateTime, Period](Aula_07\Aula07)
+2. [Revisão: Projeto Locadora](Aula_07\Aula07_Revisao_Locadora)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
