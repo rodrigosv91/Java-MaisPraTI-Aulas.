@@ -71,7 +71,7 @@
 1. [Estrutura de projeto: Maven Archetype + JUnit: Testes unitários](Aula_10\Aula10_Maven_JUnit)
 
 
-### Extra 
+## Extra 
 
 1. [Java design pattern: Singleton](Extra\java-design-pattern-singleton)
 2. [Exemplo Singleton: Janela](Extra\singleton-example-janela)
