@@ -38,47 +38,47 @@
 
 ### Aula 05
 
-1. [Listas, Herança, Polimorfismo, Interfaces, Classes abstratas](Aula_05\Aula05)
-2. [Exercício 1: Lista Funcionários](Aula_05\Aula05_Exercicio1)
-3. [Exercício 2: Sobrescrever classe Animal](Aula_05\Aula05_Exercicio2)
-4. [Exercício 3: Herdar classe abstrata funcionário e adicionar bonificação](Aula_05\Aula05_Exercicio3)
+1. [Listas, Herança, Polimorfismo, Interfaces, Classes abstratas](Aula_05/Aula05)
+2. [Exercício 1: Lista Funcionários](Aula_05/Aula05_Exercicio1)
+3. [Exercício 2: Sobrescrever classe Animal](Aula_05/Aula05_Exercicio2)
+4. [Exercício 3: Herdar classe abstrata funcionário e adicionar bonificação](Aula_05/Aula05_Exercicio3)
 
 ### Aula 06
 
-1. [Tratamento de exceções (try, catch, finally, throw )](Aula_06\Aula06)
-2. [Exercício 1: Tratar FileNotFoundException e IOException](Aula_06\Aula06_Exercicio1)
+1. [Tratamento de exceções (try, catch, finally, throw )](Aula_06/Aula06)
+2. [Exercício 1: Tratar FileNotFoundException e IOException](Aula_06/Aula06_Exercicio1)
 
 ### Aula 07
 
-1. [Datas: SimpleDateFormat, LocalDate, LocalDateTime, Period](Aula_07\Aula07)
-2. [Revisão: Projeto Locadora](Aula_07\Aula07_Revisao_Locadora) 
+1. [Datas: SimpleDateFormat, LocalDate, LocalDateTime, Period](Aula_07/Aula07)
+2. [Revisão: Projeto Locadora](Aula_07/Aula07_Revisao_Locadora) 
 
 
 
 ### Aula 08
 
 
-1. [Locadora Completa](Aula_08\Aluguel-Carros-Aula-Completo)
-2. [Criando um Programa em Java: Batalha Naval](Aula_08\Aula08_BatalhaNaval_Completo)
+1. [Locadora Completa](Aula_08/Aluguel-Carros-Aula-Completo)
+2. [Criando um Programa em Java: Batalha Naval](Aula_08/Aula08_BatalhaNaval_Completo)
 
 ### Aula 09
 
-1. [Generics, Java Lambda Expressions, Stream, Collections](Aula_09\Aula09)
+1. [Generics, Java Lambda Expressions, Stream, Collections](Aula_09/Aula09)
 
 
 ### Aula 10
 
-1. [Estrutura de projeto: Maven Archetype + JUnit: Testes unitários](Aula_10\Aula10_Maven_JUnit)
+1. [Estrutura de projeto: Maven Archetype + JUnit: Testes unitários](Aula_10/Aula10_Maven_JUnit)
 
 
 ## Extra 
 
-1. [Java design pattern: Singleton](Extra\java-design-pattern-singleton)
-2. [Exemplo Singleton: Janela](Extra\singleton-example-janela)
-3. [Java EE / Web + Servlet](Extra\FirstServlet)
-4. [JDBC (mysql-connector) + Servlet + JSP](Extra\CRUD_Servlet)
-5. [Hello World: Spring Boot + Thymeleaf](Extra\hellospringboot)
-6. [Desenvolvimento projeto](Extra\Projeto)
+1. [Java design pattern: Singleton](Extra/java-design-pattern-singleton)
+2. [Exemplo Singleton: Janela](Extra/singleton-example-janela)
+3. [Java EE / Web + Servlet](Extra/FirstServlet)
+4. [JDBC (mysql-connector) + Servlet + JSP](Extra/CRUD_Servlet)
+5. [Hello World: Spring Boot + Thymeleaf](Extra/hellospringboot)
+6. [Desenvolvimento projeto](Extra/Projeto)
 
 
 
