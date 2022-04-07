@@ -23,15 +23,15 @@ public class Main {
         // Código CRUD aqui
         
         // Estado novo
-        Cliente cliente = new Cliente();
+        Cliente cliente =  new Cliente();
         cliente.setNome("Construtora Silva");
 
-        entityManager.getTransaction().begin();
+        entityManager.getTransaction().begin(); 
 
         // Estado gerenciado
         entityManager.persist(cliente);
 
-        // Estado desanexado (nenhuma operação será feita)
+        // Estado desanexado  (nenhuma operação será feita)
         entityManager.detach(cliente);
 
         // Volta ao estado gerenciado 
