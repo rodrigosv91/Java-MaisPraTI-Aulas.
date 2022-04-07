@@ -21,8 +21,26 @@ public class Main {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         // Código CRUD aqui
-        Cliente cliente = entityManager.find(Cliente.class, 1);
-        System.out.println(cliente.getNome());
+        
+        // Estado novo
+        Cliente cliente = new Cliente();
+        cliente.setNome("Construtora Silva");
+
+        entityManager.getTransaction().begin();
+
+        // Estado gerenciado
+        entityManager.persist(cliente);
+
+        // Estado desanexado (nenhuma operação será feita)
+        entityManager.detach(cliente);
+
+        // Volta ao estado gerenciado 
+        cliente = entityManager.merge(cliente);
+
+        // Estado removido (será removido da base de dados)
+        entityManager.remove(cliente);
+
+        entityManager.getTransaction().commit();
 
         entityManager.close();
         entityManagerFactory.close();
