@@ -19,20 +19,20 @@ import java.util.logging.Logger;
 import model.Stuff;
 
 
-public class StuffDAO  extends HttpServlet{
+public class listaStuffServlet  extends HttpServlet{
     
     //move dao to dao and list servlet to controller
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
-        response.setContentType("text/html;charset=UTF-8");
+        //response.setContentType("text/html;charset=UTF-8");
         try {           
             //this.inserirStuff();
             request.setAttribute("stuff_list", this.buscarStuff());
             request.getRequestDispatcher("listarStuff.jsp").forward(request, response);           
         } catch (ClassNotFoundException | SQLException ex) {
-            Logger.getLogger(StuffDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(listaStuffServlet.class.getName()).log(Level.SEVERE, null, ex);
         }       
     }
 
@@ -64,6 +64,7 @@ public class StuffDAO  extends HttpServlet{
         return stuffList;
     }
     
+    //insert local
     public void inserirStuff() throws ClassNotFoundException, SQLException{ //inserirStuff(Connection con, Object obj)
         //conexao com db 
         Class.forName("com.mysql.cj.jdbc.Driver"); // registra o DRIVER        
