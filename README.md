@@ -78,7 +78,8 @@
 3. [Java EE / Web + Servlet](Extra/FirstServlet)
 4. [JDBC (mysql-connector) + Servlet + JSP](Extra/CRUD_Servlet)
 5. [Hello World: Spring Boot + Thymeleaf](Extra/hellospringboot)
-6. [Desenvolvimento projeto](Extra/Projeto)
+6. [JPA + Hibernate](Extra/JPA_Hibernate)
+7. [Desenvolvimento projeto](Extra/Projeto)
 
 
 
