@@ -3,6 +3,7 @@
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
+    
     <!--LISTA STUFF -->
     <servlet>
         <servlet-name>lista_stuf_servlet</servlet-name>
@@ -12,6 +13,7 @@
         <servlet-name>lista_stuf_servlet</servlet-name>
         <url-pattern>/lista_stuff</url-pattern>
     </servlet-mapping>
+    
     <!--INSERT STUFF -->
     <servlet>
         <servlet-name>insert_stuff_servlet</servlet-name>
@@ -21,4 +23,15 @@
         <servlet-name>insert_stuff_servlet</servlet-name>
         <url-pattern>/insert_stuff</url-pattern>
     </servlet-mapping>
+    
+    <!--DELETE STUFF -->
+        <servlet>
+        <servlet-name>delete_stuff_servlet</servlet-name>
+        <servlet-class>controller.DeleteStuffServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delete_stuff_servlet</servlet-name>
+        <url-pattern>/delete_stuff</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

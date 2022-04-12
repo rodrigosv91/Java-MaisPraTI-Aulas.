@@ -49,13 +49,14 @@ public class listaStuffServlet  extends HttpServlet{
     
         //faz uma busca (select) no db
         Statement s = con.createStatement();        
-        String SQL = "SELECT Name, Description FROM Stuff";
+        String SQL = "SELECT stuff_id, Name, Description FROM Stuff";
         s.executeQuery(SQL);
         ResultSet res = s.getResultSet();
         
         //adiciona resultados em sutffList
         while (res.next()) {
-            Stuff stuff = new Stuff(
+            Stuff stuff = new Stuff( 
+                    res.getInt("stuff_id"),
                     res.getString("Name"),
                     res.getString("Description")
             );         

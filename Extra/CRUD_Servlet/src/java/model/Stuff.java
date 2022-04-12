@@ -2,6 +2,7 @@
 package model;
 
 public class Stuff {
+    private Integer id;
     private String nome;
     private String descricao;
 
@@ -11,6 +12,19 @@ public class Stuff {
     public Stuff(String nome, String descricao) {
         this.nome = nome;
         this.descricao = descricao;
+    }
+    public Stuff(Integer id, String nome, String descricao) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNome() {

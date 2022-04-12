@@ -19,6 +19,7 @@
         <%
             ArrayList<Stuff> stuffList = (ArrayList<Stuff>) request.getAttribute("stuff_list");
             for (Stuff s : stuffList) {
+                out.print(s.getId());
                 out.print(s.getNome());
                 out.print(s.getDescricao());
             }
@@ -29,6 +30,7 @@
                 <tr>
                     <th>Item Name</th>
                     <th>Description</th>
+                    <th colspan=2>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,6 +38,8 @@
                     <tr>
                         <td><c:out value="${stuff.nome}" /></td>
                         <td><c:out value="${stuff.descricao}" /></td>
+                        <td><a href="update?userId=<c:out value="${stuff.id}"/>">Atualizar</a></td>
+                        <td><a href="delete_stuff?stuffId=<c:out value="${stuff.id}"/>">Deletar</a></td>
                     </tr>
                 </c:forEach>
             </tbody>
