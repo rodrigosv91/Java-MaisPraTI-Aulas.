@@ -32,7 +32,7 @@ public class InsertStuffServlet  extends HttpServlet {
         request.getRequestDispatcher("lista_stuff").forward(request, response);   
     }
     
-    //DAO INSERIR
+    //DAO STUFF >  INSERIR
     public void inserirStuff(Stuff stuff) throws ClassNotFoundException, SQLException{ //inserirStuff(Connection con, Object obj)
         
         //conexao com db 

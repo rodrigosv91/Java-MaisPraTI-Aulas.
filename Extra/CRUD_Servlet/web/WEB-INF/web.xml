@@ -25,13 +25,33 @@
     </servlet-mapping>
     
     <!--DELETE STUFF -->
-        <servlet>
+    <servlet>
         <servlet-name>delete_stuff_servlet</servlet-name>
         <servlet-class>controller.DeleteStuffServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>delete_stuff_servlet</servlet-name>
         <url-pattern>/delete_stuff</url-pattern>
+    </servlet-mapping>
+    
+    <!--UPDATE STUFF -->
+    <servlet>
+        <servlet-name>edit_stuff_servlet</servlet-name>
+        <servlet-class>controller.EditStuffServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>edit_stuff_servlet</servlet-name>
+        <url-pattern>/edit_stuff</url-pattern>
+    </servlet-mapping>
+    
+    <!--UPDATE STUFF -->
+    <servlet>
+        <servlet-name>update_stuff_servlet</servlet-name>
+        <servlet-class>controller.UpdateStuffServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>update_stuff_servlet</servlet-name>
+        <url-pattern>/update_stuff</url-pattern>
     </servlet-mapping>
     
 </web-app>

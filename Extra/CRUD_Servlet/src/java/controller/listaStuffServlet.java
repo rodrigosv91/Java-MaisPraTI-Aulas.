@@ -36,7 +36,7 @@ public class listaStuffServlet  extends HttpServlet{
         }       
     }
 
-    //REAL DAO
+    //REAL DAO STUFF > BUSCAR TODOS
     public ArrayList<Stuff> buscarStuff() throws ClassNotFoundException, SQLException {
         //ConnectionFactory db = new ConnectionFactory();
         //Connection con = ConnectionFactory.getConnection();
