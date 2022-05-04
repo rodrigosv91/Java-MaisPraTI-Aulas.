@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Listagem de contatos utilizando o Spring Boot</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="webjars/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container"><br/>
+            <h1>Lista de contatos</h1>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="contato: ${contatos}">  
+                        <td th:text="${contato.id}"></td>
+                        <td th:text="${contato.nome}"></td>
+                        <td th:text="${contato.email}"></td>
+                    </tr>
+                </tbody>
+            </table>     
+        </div>      
+    </body>
+</html>
