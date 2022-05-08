@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.validation.constraints.NotEmpty; 
+import javax.validation.constraints.Email;
 /**
  *
  * @author Rodrigo
@@ -23,7 +25,9 @@ public class Contato implements Serializable{
     private Long id;
 
     private String nome;
-
+    
+    @NotEmpty 
+    @Email
     private String email;
 
     public Contato() {

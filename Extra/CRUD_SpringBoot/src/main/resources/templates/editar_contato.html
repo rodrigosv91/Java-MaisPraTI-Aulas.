@@ -1,0 +1,21 @@
+<div th:fragment= "editar_contato">
+    <h1>Editar contato</h1>
+    <form th:action="@{/editar}" th:object="${contato}" method="post">  
+        <div class="form-group">
+            <label class="col-sm-2 col-form-label" for="id">ID:</label>
+            <input class="form-control col-sm-3" type="text"  th:field="*{id}" readonly>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 col-form-label" for="nome">Nome:</label>
+            <input class="form-control col-sm-3" type="text"  th:field="*{nome}">
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 col-form-label" for="email">Email:</label>
+            <input class="form-control col-sm-3" type="text"  th:field="*{email}">  
+            <div class="alert alert-warning" th:if="${errors}">Email Error</div>
+        </div>
+        <div class="form-group mt-4">
+            <input class="btn btn-success" type="submit" value="Salvar"/>
+        </div>            
+    </form> 
+</div>
