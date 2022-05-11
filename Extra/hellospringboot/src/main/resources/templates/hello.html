@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Hello World Spring Boot + Thymeleaf</title>
         <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     </head>
     <body>
         <div>
-            <h2>Hello World Page!</h2>
+            <h2 th:text="${message}">Hello World Page!</h2>
             <p>Hello World with Spring Boot + Thymeleaf</p>
         </div>
     </body>
