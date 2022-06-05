@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.projeto.CRUD_SpringBoot.model.Contato;
-import com.projeto.CRUD_SpringBoot.repository.Contatos;
 import java.util.Optional;
 import javax.validation.Valid;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import com.projeto.CRUD_SpringBoot.repository.ContatoRepository;
 
 
 /**
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ContatosController {
     
     @Autowired
-    private Contatos contatos;
+    private ContatoRepository contatos;
      
     //Página inicial como /contatos
     @GetMapping(value={"/index","/contatos", "/", ""})

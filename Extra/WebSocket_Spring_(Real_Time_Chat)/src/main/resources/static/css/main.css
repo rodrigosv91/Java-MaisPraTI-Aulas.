@@ -9,7 +9,7 @@ html,body {
     overflow: hidden;
 }
 
-body {
+body { 
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -164,7 +164,7 @@ button.accent {
     overflow: auto;
     overflow-y: scroll;
     padding: 0 20px 0px 20px;
-    height: calc(100% - 150px);
+    height: calc(100% - 180px);
 }
 
 #chat-page #messageForm {
@@ -280,7 +280,7 @@ button.accent {
     }
 
     #chat-page ul {
-        height: calc(100% - 120px);
+        height: calc(100% - 160px);
     }
 
     #messageForm .input-group button {

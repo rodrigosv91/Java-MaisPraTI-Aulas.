@@ -21,12 +21,12 @@ function connect(event) {
 
     if(username) {
         usernamePage.classList.add('hidden');
-        chatPage.classList.remove('hidden');
+        chatPage.classList.remove('hidden'); 
 
         var socket = new SockJS('/websocket');
         stompClient = Stomp.over(socket);
 
-        stompClient.connect({}, onConnected, onError);
+        stompClient.connect({}, onConnected, onError);  // stop
     }
     event.preventDefault();
 }
@@ -47,7 +47,7 @@ function onConnected() {
 
 
 function onError(error) {
-    connectingElement.textContent = 'Não foi possível se conectar ao WebSocket! Atualize a página e tente novamente ou entre em contato com o administrador.';
+    connectingElement.textContent = 'Não foi possível se conectar ao WebSocket! Atualize a página e tente novamente.';
     connectingElement.style.color = 'red';
 }
 
@@ -115,6 +115,19 @@ function getAvatarColor(messageSender) {
 
     var index = Math.abs(hash % colors.length);
     return colors[index];
+}
+
+function disconnect() {
+    if(stompClient != null){ 
+        
+        stompClient.send("/app/chat.register",
+            {},
+            JSON.stringify({sender: username, type: 'LEAVE'})
+        )
+        stompClient.disconnect()
+ 
+    }
+    console.log("Disconnected! :");
 }
 
 usernameForm.addEventListener('submit', connect, true)
