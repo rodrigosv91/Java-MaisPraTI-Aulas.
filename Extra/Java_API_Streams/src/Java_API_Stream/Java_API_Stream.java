@@ -1,5 +1,5 @@
 
-package test123;
+package Java_API_Stream;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -8,11 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-/**
- *
- * @author Rodrigo
- */
-public class Test123 {
+public class Java_API_Stream {
 
     /**
      * @param args the command line arguments
