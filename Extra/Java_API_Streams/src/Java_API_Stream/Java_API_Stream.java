@@ -10,11 +10,7 @@ import java.util.stream.Collectors;
 
 public class Java_API_Stream {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
         
         // Map
         List<String> listOfStrings = Arrays.asList("1", "2", "3", "4", "5");
@@ -39,7 +35,7 @@ public class Java_API_Stream {
         // Then, find entry closest to average
         Map.Entry<String, Integer> e = m.entrySet().stream()
                 .min(Comparator.comparing(a -> Math.abs(a.getValue() - average)))
-                .orElse(null);
+                .orElse(null); 
 
     }
     
